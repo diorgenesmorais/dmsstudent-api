@@ -32,7 +32,7 @@ const findAll = async (req, res) => {
     : {};
     
   try {
-    const data = await Student.find();
+    const data = await Student.find(condition);
 
     if (!data) {
       res.status(404).send('Não encontrou dados para apresentar');
